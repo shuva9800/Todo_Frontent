@@ -1,4 +1,4 @@
-/* #root {
+ #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,48 +39,11 @@
 
 .read-the-docs {
   color: #888;
-} */
+} 
 
-.App {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+.todo-heading{
+  color: red;
 }
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 10px;
-}
-
-form {
-  margin-top: 10px;
-}
-
-form input,
-form textarea,
-form select {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-}
-
-form button {
-  padding: 5px 10px;
-}
-
-.todo-list {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-.task {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 10px;
+h4{
+  background-color: red;
 }

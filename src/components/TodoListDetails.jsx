@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BiColor } from 'react-icons/bi';
 
 const TodoListDetails = ({ todoList, token, updateTodoLists }) => {
   const [tasks, setTasks] = useState(todoList.tasks);
@@ -70,7 +71,7 @@ const TodoListDetails = ({ todoList, token, updateTodoLists }) => {
       onDragOver={(e) => e.preventDefault()}
       onDrop={(e) => handleDrop(e, todoList._id)}
     >
-      <h3>{todoList.name}</h3>
+      <h3 style={{ color: 'red' }}>{todoList.name}</h3>
       <form onSubmit={addTask}>
         <input
           type="text"
@@ -110,7 +111,7 @@ const TodoListDetails = ({ todoList, token, updateTodoLists }) => {
             draggable
             onDragStart={(e) => handleDragStart(e, task)}
           >
-            <h4>{task.title}</h4>
+            <h4 >{task.title}</h4>
             <p>{task.description}</p>
             <p>Due Date: {task.dueDate}</p>
             <p>Priority: {task.priority}</p>
