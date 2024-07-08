@@ -10,7 +10,7 @@ const Auth = ({ setToken }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = isSignup ? 'http://localhost:5000/api/users/signup' : 'http://localhost:5000/api/users/login';
+    const url = isSignup ? 'https://todo-backend-1-cxgn.onrender.com/api/users/signup' : 'https://todo-backend-1-cxgn.onrender.com/api/users/login';
     const response = await axios.post(url, { email, password });
     setToken(response.data.user._id); // or response.data.token if using tokens
     navigate('/todolist');

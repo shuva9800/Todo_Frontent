@@ -19,7 +19,7 @@ const TodoListDetails = ({ todoList, token, updateTodoLists }) => {
   const addTask = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      `http://localhost:5000/api/todos/add-task`,
+      `https://todo-backend-1-cxgn.onrender.com/api/todos/add-task`,
       { todoId: todoList._id, ...newTask },
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -44,21 +44,21 @@ const TodoListDetails = ({ todoList, token, updateTodoLists }) => {
 
     // Add the task to the new list
     const addTaskResponse = await axios.post(
-      `http://localhost:5000/api/todos/add-task`,
+      `https://todo-backend-1-cxgn.onrender.com/api/todos/add-task`,
       { todoId: destinationListId, ...task },
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
     // Remove the task from the old list
     const removeTaskResponse = await axios.post(
-      `http://localhost:5000/api/todos/remove-task`,
+      `https://todo-backend-1-cxgn.onrender.com/api/todos/remove-task`,
       { todoId: sourceListId, taskId: task._id },
       { headers: { Authorization: `Bearer ${token}` } }
     );
 
     // Fetch the updated lists
     const updatedListsResponse = await axios.get(
-      `http://localhost:5000/api/todos/${token}`,
+      `https://todo-backend-1-cxgn.onrender.com/api/todos/${token}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
 

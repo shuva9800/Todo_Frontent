@@ -9,7 +9,7 @@ const TodoList = ({ token }) => {
 
   useEffect(() => {
     const fetchTodoLists = async () => {
-      const response = await axios.get(`http://localhost:5000/api/todos/${userId}`, {
+      const response = await axios.get(`https://todo-backend-1-cxgn.onrender.com/api/todos/${userId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setTodoLists(response.data);
@@ -25,7 +25,7 @@ const TodoList = ({ token }) => {
   const addTodoList = async (e) => {
     e.preventDefault();
     const response = await axios.post(
-      'http://localhost:5000/api/todos/create',
+      'https://todo-backend-1-cxgn.onrender.com/api/todos/create',
       { name: newTodoListName, userId: `${userId}` },
       { headers: { Authorization: `Bearer ${token}` } }
     );
